@@ -97,16 +97,16 @@ function getResultContainer() {
 }
 
 function checkVerdict(text) {
-  if (text === 'Accepted') {
+  if (text.includes('Accepted')) {
     handleAcceptedSubmission();
     return true;
   } else if (
-    text === 'Wrong Answer' || 
-    text === 'Time Limit Exceeded' || 
-    text === 'Memory Limit Exceeded' || 
-    text === 'Compile Error' || 
-    text === 'Runtime Error' || 
-    text === 'Output Limit Exceeded'
+    text.includes('Wrong Answer') || 
+    text.includes('Time Limit Exceeded') || 
+    text.includes('Memory Limit Exceeded') || 
+    text.includes('Compile Error') || 
+    text.includes('Runtime Error') || 
+    text.includes('Output Limit Exceeded')
   ) {
     handleFailedSubmission();
     return true;
@@ -132,14 +132,12 @@ function startSubmissionObserver() {
               continue;
             }
 
-            // Check if this node or any child matches our verdict criteria exactly
+            // Check if this node or any child matches our verdict criteria
             const elementsToCheck = [node, ...node.querySelectorAll('*')];
             for (const el of elementsToCheck) {
-              // We want to check elements that contain the exact text, ideally leaf nodes
-              if (el.children.length === 0) {
-                 const exactText = el.textContent ? el.textContent.trim() : '';
-                 if (checkVerdict(exactText)) return;
-              }
+               // We just check the textContent permissively now
+               const elText = el.textContent ? el.textContent.trim() : '';
+               if (checkVerdict(elText)) return;
             }
           }
         }
@@ -152,6 +150,15 @@ function startSubmissionObserver() {
   
   // Observe changes strictly in the selected container
   submissionObserver.observe(resultContainer, { childList: true, subtree: true, characterData: true });
+
+  // Add a fallback timeout to prevent getting permanently stuck
+  setTimeout(() => {
+    if (submissionInProgress) {
+      log('Timeout: No verdict detected after 30 seconds. Resetting state.');
+      submissionInProgress = false;
+      stopObserver();
+    }
+  }, 30000);
 }
 
 document.addEventListener('click', (e) => {
