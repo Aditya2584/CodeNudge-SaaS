@@ -1,9 +1,1 @@
-import React from 'react';
-
-export const Card = ({ children, className = '', variant = 'glass-card' }) => {
-  return (
-    <div className={`${variant} ${className}`}>
-      {children}
-    </div>
-  );
-};
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, default } from './ui/Card';

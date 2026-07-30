@@ -1,8 +1,6 @@
-import axios from 'react';
-// oops, import from axios
-import axiosInstance from 'axios';
+import axios from 'axios';
 
-const api = axiosInstance.create({
+const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
   headers: {
     'Content-Type': 'application/json',
@@ -25,7 +23,6 @@ api.interceptors.response.use(
   (error) => {
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
-      // window.location.href = '/login'; // Optional: Redirect on 401
     }
     return Promise.reject(error);
   }
