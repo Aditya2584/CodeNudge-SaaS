@@ -58,7 +58,7 @@ export const Sidebar = () => {
         </Badge>
       </div>
 
-      {/* Main Linear-style Navigation */}
+      {/* Main super Linear-style Navigation */}
       <div className="flex-1 overflow-y-auto px-3 py-4 space-y-6">
         <div>
           <p className="px-3 text-[10px] font-bold uppercase tracking-wider text-muted/60 mb-2">
