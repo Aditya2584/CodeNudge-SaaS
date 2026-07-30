@@ -53,7 +53,7 @@ export const Sidebar = () => {
           <span className="text-base font-bold tracking-tight text-white">CodeNudge</span>
         </Link>
 
-        <Badge variant="primary" size="sm" icon={Flame}>
+        <Badge variant="primary " size="sm" icon={Flame}>
           7d Streak
         </Badge>
       </div>
