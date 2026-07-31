@@ -1,0 +1,117 @@
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #2196F3;
+  --danger-color: #f44336;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+  --border-color: #ddd;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  padding: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.status {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.status.online { background-color: var(--primary-color); }
+.status.offline { background-color: #9e9e9e; }
+.status.syncing { background-color: #ff9800; animation: pulse 1s infinite; }
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(255, 152, 0, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 152, 0, 0); }
+}
+
+.info-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.info-group label {
+  font-weight: bold;
+  color: #555;
+}
+
+.token-input-group {
+  margin: 15px 0;
+}
+
+.token-input-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  color: white;
+}
+
+.btn.primary { background-color: var(--primary-color); }
+.btn.primary:hover { background-color: #45a049; }
+
+.btn.secondary { background-color: var(--secondary-color); }
+.btn.secondary:hover { background-color: #0b7dda; }
+
+.btn.danger { background-color: var(--danger-color); }
+.btn.danger:hover { background-color: #da190b; }
+
+.hidden {
+  display: none !important;
+}
+
+.message {
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.message.success { background-color: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.message.error { background-color: #ffebee; color: #c62828; border: 1px solid #ffcdd2; }

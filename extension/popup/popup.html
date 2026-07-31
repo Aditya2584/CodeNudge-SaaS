@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeNudge</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>CodeNudge</h1>
+      <div id="statusIndicator" class="status offline"></div>
+    </header>
+    
+    <main>
+      <div class="info-group">
+        <label>Backend URL:</label>
+        <span id="backendUrl">http://localhost:5000/api/v1</span>
+      </div>
+      
+      <div class="info-group">
+        <label>Logged In:</label>
+        <span id="loggedInStatus">No</span>
+      </div>
+
+      <div class="info-group">
+        <label>Last Sync:</label>
+        <span id="lastSyncTime">Never</span>
+      </div>
+
+      <div class="token-input-group" id="tokenGroup">
+        <input type="password" id="tokenInput" placeholder="Enter JWT Token" />
+      </div>
+
+      <div class="actions">
+        <button id="loginBtn" class="btn primary">Login</button>
+        <button id="logoutBtn" class="btn danger hidden">Logout</button>
+        <button id="testBtn" class="btn secondary">Test Backend</button>
+      </div>
+      
+      <div id="messageBox" class="message hidden"></div>
+    </main>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
