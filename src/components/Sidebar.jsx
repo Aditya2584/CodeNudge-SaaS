@@ -1,1 +1,4 @@
-export { Sidebar, default } from '../layout/Sidebar';
+import Sidebar from '../layout/Sidebar';
+
+export { Sidebar };
+export default Sidebar;

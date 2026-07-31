@@ -2,45 +2,30 @@ import api from './api';
 
 export const authService = {
   login: async (credentials) => {
-    const response = await api.post('/auth/login', credentials);
+    const response = await api.post('/auth/signin', credentials);
     return response.data;
   },
   signup: async (userData) => {
-    const response = await api.post('/auth/register', userData);
+    const response = await api.post('/auth/signup', userData);
     return response.data;
   },
   getProfile: async () => {
     try {
-      const response = await api.get('/auth/profile');
-      return response.data;
-    } catch {
-      return {
-        name: 'LeetCoder Pro',
-        email: 'user@example.com',
-        username: 'coder123',
-        revisionTime: '09:00',
-        questionsPerDay: 5,
-        emailDaily: true,
-        emailWeekly: true,
-        emailUpdates: false,
-        theme: 'dark',
-      };
+      const response = await api.get('/auth/me');
+      return response.data?.data || response.data;
+    } catch (error) {
+      console.warn('GET /auth/me is not authenticated or returned error:', error);
+      return null;
     }
   },
   updateProfile: async (profileData) => {
+    // TODO: Integrate with backend endpoint PUT /api/v1/auth/profile
     try {
       const response = await api.put('/auth/profile', profileData);
       return response.data;
-    } catch {
-      return { success: true, message: 'Profile updated successfully' };
-    }
-  },
-  updateSettings: async (settingsData) => {
-    try {
-      const response = await api.put('/auth/settings', settingsData);
-      return response.data;
-    } catch {
-      return { success: true, message: 'Settings saved successfully' };
+    } catch (error) {
+      console.warn('PUT /auth/profile is not yet available on backend.');
+      throw error;
     }
   },
 };
