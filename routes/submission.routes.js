@@ -6,7 +6,7 @@ const { createSubmissionSchema } = require('../validators/submission.validator')
 
 const router = Router();
 
-// Protect all routes
+// Protect each routes
 router.use(verifyJWT);
 
 router.post('/', validate(createSubmissionSchema), submissionController.syncSubmission);
