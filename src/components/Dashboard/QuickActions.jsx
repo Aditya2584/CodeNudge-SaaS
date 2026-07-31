@@ -21,7 +21,7 @@ export const QuickActions = ({ onSync }) => {
     },
     {
       label: "Problems",
-      icon: BookOpen,
+      icon: BookOpen ,
       onClick: () => navigate('/problems'),
       variant: "outline",
     },
