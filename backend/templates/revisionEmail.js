@@ -6,7 +6,7 @@ function generateRevisionEmail(user, questions) {
 
         return `
             <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px;">
-                <h3 style="margin: 0 0 10px 0; color: #333;">${index + 1}. ${q.title || 'Unknown Problem'}</h3>
+                <h3 style="margin: 0 0 10px 0; color: #333;">${index + 1}. ${q.titleSlug || 'Unknown Problem'}</h3>
                 <p style="margin: 0 0 10px 0; font-size: 14px; color: #666;">
                     <strong>Difficulty:</strong> ${q.difficulty || 'Unknown'}
                 </p>
