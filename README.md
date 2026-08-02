@@ -16,6 +16,10 @@ Instead of manually tracking solved questions, the Chrome Extension automaticall
 
 ---
 
+# 🎞️ Demo Video
+https://github.com/user-attachments/assets/1ad6902a-ff5c-4e1d-87e4-3ede350b97ba
+
+
 # 🌟 Overview
 
 Most developers solve hundreds of coding problems but forget many because they never revise them systematically.
