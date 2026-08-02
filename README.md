@@ -1,6 +1,6 @@
 # 🚀 CodeNudge
 
-> **An AI-powered coding revision platform that automatically captures accepted LeetCode submissions through a Chrome Extension, synchronizes them with a MERN backend, and generates personalized revision schedules with automated email reminders.**
+> **A coding revision platform that automatically captures accepted LeetCode submissions through a Chrome Extension, synchronizes them with a MERN backend, and generates personalized revision schedules with automated email reminders.**
 
 [![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-22-green?logo=node.js)](https://nodejs.org/)
