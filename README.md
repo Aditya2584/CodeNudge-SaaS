@@ -1,4 +1,4 @@
-# 🚀 CodeNudge - SaaS
+# 🚀 CodeNudge
 
 > **An AI-powered coding revision platform that automatically captures accepted LeetCode submissions through a Chrome Extension, synchronizes them with a MERN backend, and generates personalized revision schedules with automated email reminders.**
 
