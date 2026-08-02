@@ -1,4 +1,4 @@
-# 🚀 CodeNudge
+# 🚀 CodeNudge - SaaS
 
 > **An AI-powered coding revision platform that automatically captures accepted LeetCode submissions through a Chrome Extension, synchronizes them with a MERN backend, and generates personalized revision schedules with automated email reminders.**
 
@@ -10,7 +10,7 @@
 [![JWT](https://img.shields.io/badge/Auth-JWT-blue)]()
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-CodeNudge is a full-stack productivity platform that helps developers **never forget solved coding problems again**.
+CodeNudge is a full-stack Saas productivity platform that helps developers **never forget solved coding problems again**.
 
 Instead of manually tracking solved questions, the Chrome Extension automatically detects accepted LeetCode submissions, synchronizes them with the backend, and schedules intelligent revisions with daily email reminders.
 
