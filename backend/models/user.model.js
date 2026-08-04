@@ -29,6 +29,12 @@ const userSchema = new mongoose.Schema(
             type: Date,
             default: null,
         },
+        newQueue: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Problem'
+            }
+        ],
         revisionQueue: [
             {
                 type: mongoose.Schema.Types.ObjectId,

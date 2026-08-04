@@ -14,9 +14,11 @@ function startRevisionScheduler() {
                 try {
                     console.log(`[Revision Job] Processing user: ${user.email}`);
 
-                    // Skip users with empty revisionQueue
-                    if (!user.revisionQueue || user.revisionQueue.length === 0) {
-                        console.log(`[Revision Job] Skipping ${user.email} - revisionQueue is empty`);
+                    // Skip users if both revisionQueue and newQueue are empty
+                    const hasRevisionItems = user.revisionQueue && user.revisionQueue.length > 0;
+                    const hasNewItems = user.newQueue && user.newQueue.length > 0;
+                    if (!hasRevisionItems && !hasNewItems) {
+                        console.log(`[Revision Job] Skipping ${user.email} - revisionQueue and newQueue are empty`);
                         continue;
                     }
 
