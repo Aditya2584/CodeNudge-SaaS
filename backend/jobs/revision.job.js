@@ -35,7 +35,7 @@ function startRevisionScheduler() {
                             console.log(`[Revision Job] Processing user: ${user.email} - Questions: ${questions.length} - Email Sent: Failure`);
                         }
                     } else {
-                        console.log(`[Revision Job] Skipping ${user.email} - No questions retrieved after completeTodaysRevision`);
+                        console.log(`[Revision Job] Skipping ${user.email} - No question retrieved after completeTodaysRevision`);
                     }
 
                 } catch (userError) {
