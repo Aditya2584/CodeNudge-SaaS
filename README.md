@@ -1,3 +1,6 @@
+# 🎞️ Demo Video
+https://github.com/user-attachments/assets/1ad6902a-ff5c-4e1d-87e4-3ede350b97ba
+
 # 🚀 CodeNudge
 
 > **A coding revision platform that automatically captures accepted LeetCode submissions through a Chrome Extension, synchronizes them with a MERN backend, and generates personalized revision schedules with automated email reminders.**
@@ -15,9 +18,6 @@ CodeNudge is a full-stack Saas productivity platform that helps developers **nev
 Instead of manually tracking solved questions, the Chrome Extension automatically detects accepted LeetCode submissions, synchronizes them with the backend, and schedules intelligent revisions with daily email reminders.
 
 ---
-
-# 🎞️ Demo Video
-https://github.com/user-attachments/assets/1ad6902a-ff5c-4e1d-87e4-3ede350b97ba
 
 
 # 🌟 Overview
